@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style media="screen">
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : sans-serif;
+      width : 100%;
+      height : 100%
+    }
+    a{
+      text-decoration : none;
+      color : #1a73e8;
+    }
+    .container{
+      position : absolute;
+      width : 500px;
+      height : 70%;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      border : 1px solid #9e9e9eb0;
+      text-align : center;
+      border-radius : 5px;
+    }
+    .container h2:nth-child(1){
+      display : inline-block;
+      cursor : pointer;
+      margin-bottom : -10px;
+    }
+    .login{
+      width : 70%;
+      height : 69%;
+      margin : 20px auto;
+
+    }
+    .find{
+      text-align  : left;
+      margin-top : 10px;
+      margin-bottom : 20px;
+    }
+    #log{
+      font-weight : normal;
+    }
+    input[type = "text"],input[type = "password"]{
+      border : 0;
+      outline : none;
+      width : 100%;
+      padding : 20px 0px;
+      text-indent : 10px;
+      border-radius : 5px;
+      border : 1px solid #9e9e9eb0;
+      font-size : 18px;
+      transition : 0.2s;
+    }
+    input[type = "text"]:focus,input[type = "password"]:focus{
+      border : 2px solid #1a73e8;
+    }
+    input[type = "text"]{
+      margin-top : 20px;
+    }
+    .sign {
+      width : 100%;
+      text-align : left;
+    }
+    .sign input{
+      float : right;
+      padding : 5px 25px;
+      background : #1a73e8c9;
+      color : white;
+      border : none;
+      border-radius: 4px;
+      font-size : 16px;
+
+      transition : 0.1s;
+      cursor : pointer;
+    }
+    .sign input:hover{
+      background : #1a73e8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2><a href="file:///C:/Users/%EB%AC%B8/Desktop/%EA%B3%B5%EB%B6%80/%EC%9E%91%EC%97%85/homepage/homepage.html">Google</a></h2>
+    <h2 id = "log">로그인</h2>
+    <div>Google 계정 사용</div>
+    <div class="login">
+
+        <input type="text" id = "id" placeholder = "이메일 또는 휴대전화">
+        <div class="find"><a href="">이메일을 잊으셧나요?</a></div>
+      <input type="password" id = "pw" placeholder = "비밀번호">
+      <div class="find"><a href="">비밀번호를 잊으셧나요?</a></div>
+      <div class="sign">
+        <a href="">회원가입</a>
+        <input type="submit" value = "다음">
+        </div>
+    </div>
+  </div>
+  <script>
+
+  </script>
+</body>
+</html>

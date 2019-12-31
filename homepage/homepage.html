@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/d9b7166f9c.js"></script>
+  <link rel="stylesheet" href="homepage.css">
+  <style>
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : sans-serif;
+      width : 100%;
+      height : 100%
+    }
+    .container {
+      width : 100%:
+      position : absolute;
+      top : 50%:
+      left : 50%;
+      display :flex;
+      flex-direction : column;
+    }
+    .container .nav{
+      display :flex;
+      position : absolute;
+      right : 20px;
+      top : 20px;
+      font-size : 14px;
+    }
+    .container .nav div{
+      margin-right : 15px;
+      cursor : pointer;
+    }
+    .container .nav div:hover{
+      text-decoration : underline;
+    }
+    .container .nav a{
+      position : relative;
+      background : #4285f4;
+      color : #fff;
+      border : none;
+      padding : 5px 15px;
+      border-radius : 4px;
+      top : -2px;
+      font-weight : bold;
+      font-size : 12px;
+      text-decoration : none;
+    }
+    .container main{
+      position : absolute;
+      width : 50%;
+      height : 50%;
+      text-align : center;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -70%);
+    }
+    .container .logo{
+      display : inline;
+      font-size : 40px;
+      cursor : pointer;
+    }
+    .logo a{
+      text-decoration : none;
+      color : black;
+    }
+    .container input{
+      border : 0;
+      margin-top : -20px;
+      outline : none;
+      border : 1px solid gray;
+      width : 75%;
+      padding : 10px 15px;
+      border-radius : 30px;
+      font-size : 18px;
+      transition : 0.1s;
+
+    }
+    .container input:hover{
+      box-shadow : 5px 5px 2px #00000054;
+    }
+    .container input:focus{
+      box-shadow : 5px 5px 2px #00000054;
+    }
+    main .icon{
+      position : relative;
+    }
+    main .icon i{
+      position : absolute;
+      font-size : 20px;
+      right : 15%;
+      color : #4285f4;
+      top : 0;
+      cursor : pointer;
+    }
+    main span{
+      position : absolute;
+      width : 50px;
+      right : -200%;
+      top : 150%;
+      background : black;
+      padding : 5px 10px;
+      color : white;
+      font-size : 12px;
+      font-weight : bold;
+      display : none;
+    }
+    i:hover>span{
+      display : block;
+    }
+    main .button{
+      margin-top : 40px;
+    }
+    main .button button{
+      padding : 10px 15px;
+      height : 40px;
+      border : none;
+      background : #f2f2f2;
+      border-radius : 5px;
+      color  : #5F6368;
+      font-weight : bold;
+      margin : 0 10px;
+      cursor : pointer;
+      border : 0;
+    }
+    .button button:hover{
+      border : 1px solid #80808080;
+    }
+    .container footer{
+      position : absolute;
+      bottom : 0;
+      width : 100%;
+      color : rgba(0,0,0,.54);
+      background : #f2f2f2;
+      font-size : 14px;
+    }
+    footer .country{
+      padding : 10px 20px;
+      font-size : 16px;
+      border-bottom : 1px solid #80808080;
+    }
+    footer .left{
+      padding : 10px 20px;
+      float : left;
+    }
+    .left span{
+      margin-right : 10px;
+    }
+    footer .right{
+      padding : 10px 20px;
+      float : right;
+    }
+    .right span{
+      margin-right : 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav">
+        <div>Gmail</div>
+        <div>이미지</div>
+        <div><i class="fas fa-bars"></i></div>
+        <div><a href="file:///C:/Users/%EB%AC%B8/Desktop/%EA%B3%B5%EB%B6%80/%EC%9E%91%EC%97%85/homepage/login.html">로그인</a></div>
+      </div>
+    </header>
+    <main>
+      <div class="logo"><h1 ><a href="" onclick = "location.reload()">Google</a></h1></div>
+      <div class="icon">
+        <input type="text" >
+        <i class="fas fa-microphone"><span>음성검색</span></i><br>
+      </div>
+      <div class="button">
+        <button>Google 검색</button>
+        <button>I'm Feeling  Lucky</button>
+      </div>
+    </main>
+    <footer>
+      <div class = "country">대한민국</div>
+      <div class = "navi">
+        <div class="left">
+          <span>광고</span>
+          <span>비즈니스</span>
+          <span>Google정보</span>
+          <span>검색의 원리</span>
+        </div>
+        <div class="right">
+          <span>개인정보처리방침</span>
+          <span>약관</span>
+          <span>설정</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script>
+</script>
+</html>

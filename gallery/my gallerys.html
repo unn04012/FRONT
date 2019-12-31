@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style media="screen">
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : "Montserrat", sans-serif;
+      background : #f1f1f1;
+    }
+    .gallery{
+      position : absolute;
+      left : 50%;
+      width : 100%;
+      transform : translateX(-50%);
+      text-align : center;
+    }
+    .gallery h1{
+      text-transform : uppercase;
+    }
+    .border{
+      margin : auto;
+      width : 100px;
+      border : 2px solid black;
+      margin-top : 50px;
+    }
+    .photos{
+      margin : auto;
+      margin-top : 50px;
+      width : 80%;
+      height : 100vh;
+
+    }
+    .photo{
+      margin : 0;
+    }
+    .photo div{
+      float : left;
+      width : 300px;
+      height : 300px;
+      margin-top : -1px;
+      overflow : hidden;    // 중요
+      cursor : pointer;
+    }
+    img{
+      width : 100%;
+      height : 100%;
+      transition : 0.4s;
+    }
+    .photo div:hover img{
+      transform : scale(1.4) rotate(15deg);
+    }
+    @media screen and(max-width : 768px){
+      .photo img{
+        flex : 50%;
+      }
+    }
+
+    @media screen and(max-width : 480px){
+      .photo img{
+        flex : 33.33%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <h1>My gallerys</h1>
+    <div class="border"></div>
+    <div class="photos">
+      <div class="photo">
+        <div id = "1"><img src="1.jpg" alt=""></div>
+        <div><img src="2.jpg" alt=""></div>
+        <div><img src="3.jpg" alt=""></div>
+        <div><img src="4.jpg" alt=""></div>
+      </div>
+      <div class="photo">
+        <div><img src="5.jpg" alt=""></div>
+        <div><img src="6.jpg" alt=""></div>
+        <div><img src="7.jpg" alt=""></div>
+        <div><img src="8.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+</body>
+</html>

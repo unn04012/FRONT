@@ -1,0 +1,91 @@
+<!Doctype html>
+<html>
+<head>
+  <style>
+  body{
+    margin : 0;
+    padding : 0;
+    background : tomato;
+  }
+  .calculator{
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    border : 3px solid black;
+    padding : 20px 10px;
+  }
+  input[type = "text"]{
+    position : relative;
+    outline : none;
+    left : 2px;
+    width : 193px;
+    padding : 10px;
+    margin-bottom : 5px;
+    border : 2px solid black;
+    font-size : 20px;
+    transition: 0.2s;
+  }
+    input[type = "button"]{
+      border : 2px solid black;
+      width : 50px;
+      height : 50px;
+      margin-right : 1px;
+      cursor : pointer;
+      transition : 0.3s;
+      font-size : 18px;
+    }
+    input[type = "button"]:hover{
+      background : black;
+      color : white;
+    }
+    input[type = "text"]:focus{
+      background : black;
+      color : white;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input id = "text" type="text">
+    <table>
+      <tr>
+        <td><input onclick = "show(1)" type="button" value = "1"></td>
+        <td><input onclick = "show(2)" type="button" value = "2"></td>
+        <td><input onclick = "show(3)" type="button" value = "3"></td>
+        <td><input onclick = "show('+')" type="button" value = "+"></td>
+      </tr>
+      <tr>
+        <td><input onclick = "show(4)" type="button" value = "4"></td>
+        <td><input onclick = "show(5)" type="button" value = "5"></td>
+        <td><input onclick = "show(6)" type="button" value = "6"></td>
+        <td><input onclick = "show('-')" type="button" value = "-"></td>
+      </tr>
+      <tr>
+        <td><input onclick = "show(7)" type="button" value = "7"></td>
+        <td><input onclick = "show(8)" type="button" value = "8"></td>
+        <td><input onclick = "show(9)" type="button" value = "9"></td>
+        <td><input onclick = "equal()" type="button" value = "="></td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    var td = document.getElementsByTagName('td');
+    var text = document.getElementById("text");
+    var op = document.getElementsByClassName('op');
+
+    function show(exp){
+      text.value += exp;
+    }
+    function equal(){
+      text.value = eval(text.value);
+    }
+    text.addEventListener('keypress',function(event){
+      if(event.keyCode == 13){
+        text.value = eval(text.value);
+      }
+    })
+
+  </script>
+</body>
+</html>
