@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+<head>
+  <style>
+    *{
+      text-decoration : none;
+    }
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : san-serif;
+    }
+    #btn{
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      border : 2px solid tomato;
+      border-radius : 6px;
+      color : tomato;
+      padding : 10px;
+      background : none;
+      font-weight : bold;
+    }
+    .blow{
+      width : 500px;
+      height : 200px;
+      overflow : hidden;
+      background : #34495e;
+      position : fixed;
+      bottom : 20px;
+      right : 20px;
+    }
+
+    .blow img{
+      width : 200px;
+      height : 200px;
+      float : left;
+    }
+
+    .column{
+      width : 300px;
+      padding : 20px;
+      box-sizing :  border-box;
+      color : white;
+      float : left;
+    }
+    .name{
+      font-weight : bold;
+      font-size : 24px;
+    }
+    a{
+      display : inline-block;
+      background : #e74c3c;
+      padding: 10px 30px;
+      border-radius : 8px;
+      color : white;
+    }
+
+
+  </style>
+</head>
+<body>
+  <button id = "btn">Show Background</button>
+  <div class="blow">
+    <img src="background.jpg" alt="">
+    <div class = "column">
+      <div class = "name">Awesome Background</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, similique</p>
+        <a href="">Read More</a>
+    </div>
+  </div>
+</body>
+</html>
