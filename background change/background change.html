@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <style>
+    body{
+      margin : 0;
+      padding : 0;
+      font-family: sans-serif;
+      background : #343334;
+    }
+    .icon{
+      position : absolute;
+      right : 30px;
+      top : 30px;
+      font-size : 30px;
+      color : white;
+      cursor : pointer;
+    }
+    .change-color-form{
+      position : absolute;
+      width : 400px;
+      height : 200px;
+      top : -50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      color : white;
+      background : #f2f1f2;
+      transition : 1s;
+    }
+
+    .header{
+      background : #34495e;
+      padding : 15px;
+      font-size : 18px;
+      text-transform : uppercase;
+      font-weight : bold;
+    }
+    .enter {
+      margin-top : 50px;
+    }
+    .enter input{
+      display : block;
+      margin : auto;
+    }
+    input[type=text]{
+      font-size : 16px;
+      padding : 10px;
+      width : 70%;
+      text-indent : 60px;
+    }
+    input[type=submit]{
+        position : absolute;
+        right : 48px;
+        margin-top : 10px;
+        padding : 5px;
+        width : 100px;
+        background : #34495e;
+        color : white;
+        border : none;
+        cursor : pointer;
+    }
+    .enter div{
+      position : absolute;
+      left : 53px;
+      width : 60px;
+      height : 32px;
+      background : black;
+      margin-top : 5px;
+    }
+
+  </style>
+</head>
+<body>
+<div class = "icon"><i class="fas fa-cog"></i></div>
+  <div class="change-color-form">
+    <div class="header">enter a color</div>
+    <div class="enter">
+      <div class = "color"></div><input id = "input" type="text" placeholder = "#000000">
+      <input id = "submit" type="submit" value = "APPLY">
+    </div>
+  </div>
+  <script>
+    var icon = document.getElementsByClassName('icon')[0];
+    var form = document.getElementsByClassName('change-color-form')[0];
+    var input = document.getElementById('input');
+    var color = document.getElementsByClassName('color')[0];
+    var send = document.getElementById('submit');
+    var background = document.getElementsByTagName('body')[0];
+    icon.addEventListener('click',function(event){
+      form.style.top = 50+'%';
+    })
+
+    input.addEventListener('keyup',function(){
+      color.style.background = input.value;
+    })
+
+    send.addEventListener('click',function(event){
+      background.style.background = input.value;
+      form.style.top = '-'+50+'%';
+    })
+
+    if(background.style.background === "#fff"){
+      icon.style.color = 'black';
+    }
+
+
+  </script>
+</body>
+</html>
