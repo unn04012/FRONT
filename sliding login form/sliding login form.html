@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <style>
+    *{
+
+    }
+
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : "montserrat", sans-serif;
+      width : 200%;
+      display : flex;
+      position : absolute;
+      color : white;
+      background : #31354c;
+      overflow : hidden;
+      transition : 0.5s;
+    }
+    .container{
+      margin-top : 275px;
+      width : 100%;
+      /* background-image : linear-gradient(45deg, #9fbaa8, #31354c); */
+      text-align : center;
+      align-itmes : center;
+    }
+    .container h1{
+      font-size : 40px;
+    }
+    .container input{
+      box-sizing : border-box;
+      width : 250px;
+      background : none;
+      border : 2px solid white;
+      margin :  10px auto;
+      display : block;
+      padding : 10px;
+      border-radius : 10px;
+      font-size : 18px;
+      color : white;
+      text-indent : 5px;
+    }
+    .container input[type = "submit"]{
+      background : #9c27b0ab;
+    }
+    .icon{
+      position : absolute;
+      right : 50%;
+      font-size : 24px;
+      cursor : pointer;
+      transition : 0.3s;
+    }
+    .icon:hover{
+      color : #ffffff99
+    }
+    .show-login-form{
+      width : 100%;
+      text-align : center;
+      margin-top : 350px;
+    }
+    .show-login-form input{
+      font-size : 18px;
+      color : white;
+      background : none;
+      padding : 10px;
+      border-radius : 10px;
+      cursor : pointer;
+      outline : none;
+      transition : 0.3s;
+    }
+    .show-login-form input:hover{
+      background : black;
+    }
+  </style>
+</head>
+<body>
+  <div class="icon"><i class="fas fa-times"></i></div>
+  <div class="container">
+    <h1>Welcome</h1>
+    <div class="login-form">
+      <input type="text" placeholder = "Username">
+      <input type="password" placeholder = "Password">
+      <input type="submit" value = "Login">
+    </div>
+  </div>
+  <div class="show-login-form">
+    <input id = "button" type="button" value = "Show Login Form">
+  </div>
+
+  <script>
+    var t = document.getElementsByClassName('icon')[0];
+    var s = document.getElementsByTagName('body')[0];
+    var b = document.getElementById('button');
+    t.addEventListener('click',function(event){
+      s.style.marginLeft = '-'+100+ '%';
+    })
+
+    b.addEventListener('click',function(event){
+      s.style.marginLeft = 0;
+    })
+  </script>
+</body>
+</html>

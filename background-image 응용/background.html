@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/d9b7166f9c.js"></script>
+  <style>
+    body{
+      margin : 0;
+      padding : 0;
+    }
+    .images{
+      text-align : center;
+      overflow : hidden;
+    }
+    .images img{
+      width : 300px;
+      height : 200px;
+      margin : 30px;
+      cursor : pointer;
+      transition: 0.4s;
+    }
+    .images img:hover{
+      opacity : 0.8;
+    }
+    .background img{
+
+    }
+    .background {
+      width : 900px;
+      height : 520px;
+      overflow : hidden;
+      position : relative;
+      margin : auto;
+    }
+    .background img{
+      width : 100%;
+      height : 100%;
+    }
+    .background i{
+      position : absolute;
+      top : 0;
+      right : 0;
+      color : white;
+      font-size : 24px;
+      padding : 10px;
+      cursor : pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="images">
+    <img onclick = "changeimg(this)" src="background1.jpg" alt="">
+    <img onclick = "changeimg(this)" src="background2.jpg" alt="">
+    <img onclick = "changeimg(this)" src="background3.jpg" alt="">
+    <img onclick = "changeimg(this)" src="background4.jpg" alt="">
+  </div>
+  <div class="background">
+    <i onclick = "this.parentElement.style.display = 'none'"class="far fa-window-close"></i>
+    <img id = "p" src="background1.jpg" alt="">
+  </div>
+  <script>
+    function changeimg(image){
+      var t = document.getElementById("p");
+      t.src = image.src;
+      t.parentElement.style.display = "block";
+    }
+  </script>
+</body>
+</html>

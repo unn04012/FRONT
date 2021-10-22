@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      margin : 0;
+      padding : 0;
+      background : black;
+    }
+
+    #text{
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%,-50%);
+      color : white;
+      font-size : 40px;
+      text-transform : uppercase;
+      font-family : "Montserrat";
+      font-weight : 700;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="text">
+
+  </div>
+  <script>
+    var i =0;
+    var text = "welcome DarkCode";
+
+    function typing(){
+      if(i<text.length){
+        document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing , 50);
+      }
+    }
+    typing();
+  </script>
+</body>
+</html>

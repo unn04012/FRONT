@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <style media="screen">
+    body{
+      margin : 0;
+      padding : 0;
+      background : #333;
+    }
+    .container{
+      background : url(bg.jpg) no-repeat center;
+      padding : 100px 40px;
+      color : white;
+      height : 100vh;
+      text-align : center;
+    }
+    .container .main{
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+    }
+    .main h1{
+      font-weight : 800;
+      font-size : 40px;
+      text-transform : uppercase;
+    }
+    .container p{
+      max-width : 600px;
+      margin : 40px auto;
+      font-size : 18px;
+      font-weight: 300;
+    }
+    .message{
+      padding : 10px;
+      background : #2f3542;
+      text-transform : uppercase;
+      color : white;
+      font-weight : bold;
+    }
+    .input{
+      padding : 10px;
+      display : flex;
+      justify-content : center;
+    }
+    .input button{
+      border-left : 3px solid white;
+    }
+    .input input{
+      text-indent : 10px;
+      width : 0;
+      font-size : 16px;
+      transition : 0.3s;
+    }
+    .input:hover input, input:focus{
+      width : 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <h1>Join Our NewsLetter</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti nam accusantium voluptatem quibusdam repellat debitis ad exercitationem, odit hic quidem!
+      </p>
+      <span class="input">
+        <span class="message"><i class="fas fa-envelope"></i></span>
+        <input type="text" placeholder = "Enter your email">
+        <span class="message">subscribe</span>
+      </span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : sans-serif;
+      background : gray;
+    }
+    h1,h2{
+      text-transform : uppercase;
+    }
+    h1{
+      margin-bottom : 50px;
+    }
+    .team{
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      text-align : center;
+      color : #fff;
+    }
+    .image{
+      display : flex;
+      justify-content : center;
+    }
+    .image div{
+      width : 200px;
+      height : 200px;
+      border-radius : 50%;
+      border : 1px solid white;
+      margin : 0 10px;
+    }
+    img{
+      width : 100%;
+      height : 100%;
+      border-radius : 50%;
+
+      cursor : pointer;
+      transition : 0.4s;
+    }
+
+    img:hover{
+      filter: grayscale(0);
+    }
+    .section{
+      height : 0;
+      overflow : hidden;
+    }
+    .section:target{
+      height : auto;
+    }
+
+    p{
+      text-align : justify;
+    }
+    .show{
+      transition : 0.4s;
+      filter : grayscale(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="team">
+     <h1>our team</h1>
+     <div class="image">
+       <div><a href="#p1"><img src="1.png" alt=""></a></div>
+       <div><a href="#p2"><img src="2.png" alt=""></a></div>
+       <div><a href="#p3"><img src="3.png" alt=""></a></div>
+       <div><a href="#p3"><img src="4.png" alt=""></a></div>
+     </div>
+     <div class="section" id = "p1">
+       <h2>sunrise</h2>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati velit, placeat, quas facere atque molestias alias pariatur blanditiis nihil perferendis iusto aspernatur dignissimos. Ullam quaerat voluptates voluptate omnis animi, at, culpa soluta inventore quos, maiores maxime! Iusto porro voluptatibus enim, similique veniam dolores, labore tempora facere quaerat nulla in voluptatum.</p>
+     </div>
+
+     <div class="section" id = "p2">
+       <h2>ballon</h2>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio doloremque molestias sequi aliquid voluptatum, nemo hic, officiis minima sapiente illum, voluptatem? Neque quos perspiciatis sit quasi quas nesciunt consequuntur a facere. Tempora ab incidunt officiis cumque iure error saepe fugit.</p>
+     </div>
+
+     <div class="section" id = "p3">
+       <h2>sand</h2>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati velit, placeat, quas facere atque molestias alias pariatur blanditiis nihil perferendis iusto aspernatur dignissimos. Ullam quaerat voluptates voluptate omnis animi, at, culpa soluta inventore quos, maiores maxime! Iusto porro voluptatibus enim, similique veniam dolores, labore tempora facere quaerat nulla in voluptatum.</p>
+     </div>
+  </div>
+
+  <script>
+    var t = document.getElementsByTagName('img');
+    function color(event){
+      event.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

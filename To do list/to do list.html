@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/d9b7166f9c.js"></script>
+  <style>
+    *{
+      box-sizing : border-box;
+    }
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : sans-serif;
+      background-image : linear-gradient(120deg, #487eb0, #fbc531);
+      width : 100%;
+      min-height : 100vh;
+    }
+    .container{
+      position : relative;
+      margin : 100px auto;
+      width : 80%;
+    }
+    .not{
+      background-color : rgba(221,221,221,0.6);
+      padding : 20px;
+      margin-top : 10px;
+      margin-bottom : 10px;
+      transition : 0.5s;
+    }
+    .check{
+      position : absolute;
+      right : 60px;
+      cursor : pointer;
+    }
+    .trash{
+      position : absolute;
+      right : 30px;
+      cursor : pointer;
+    }
+    span{
+      font-size : 24px;
+      font-weight : bold;
+    }
+    .list input{
+      background : none;
+      border : none;
+      outline : none;
+      border-bottom : 2px solid black;
+      width : 100%;
+      margin-bottom : 10px;
+      font-size : 24px;
+      text-indent : 10px;
+    }
+    .com{
+      background : rgba(000,000,000, 0.6);
+      padding : 20px;
+      margin-top : 10px;
+      color : white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="list">
+      <div><input id = "text" type="text" placeholder = "Add a task"></div>
+      <span>Not Completed</span>
+      <div class = "not">
+        play games
+        <i class="check fas fa-check"></i>
+        <i class="trash fas fa-trash"></i>
+      </div>
+      <div class = "not">
+        read a book
+        <i class="check fas fa-check"></i>
+        <i class="trash fas fa-trash"></i>
+      </div>
+      <div class = "not">
+        coding
+        <i class="check fas fa-check"></i>
+        <i class="trash fas fa-trash"></i>
+      </div>
+      <div class = "not">
+        drink coffee
+        <i class="check fas fa-check"></i>
+        <i class="trash fas fa-trash"></i>
+      </div>
+    </div>
+    <div class="completed">
+      <span>Completed</span>
+      <div class = "com">
+        task 1
+        <i class="trash fas fa-trash"></i>
+      </div>
+      <div class = "com">
+        eat
+        <i class="trash fas fa-trash"></i>
+      </div>
+    </div>
+  </div>
+  <script>
+    var t = document.getElementsByClassName('trash');
+    var a = document.getElementsByClassName('check');
+
+    var submit = document.getElementById('text');
+    var list = document.getElementsByClassName('not');
+    var cont = document.getElementsByClassName('list')[0];
+
+
+    submit.addEventListener('keyup',function(event){
+        // enter의 키코드는 13번이다
+      if(event.keyCode == 13 && submit.value !="" ){
+        var text = document.createTextNode(submit.value);
+        var plus = document.createElement('div');
+        plus.appendChild(text);
+        plus.classList.toggle('not');
+        cont.appendChild(plus);
+      }
+    })
+    t[0].addEventListener('click',function(event){
+      t[0].parentElement.parentElement.removeChild(t[0].parentElement);
+    })
+    t[1].addEventListener('click',function(event){
+      t[1].parentElement.parentElement.removeChild(t[0].parentElement);
+    })
+
+    a[0].addEventListener('click',function(event){
+      t[0].parentElement.parentElement.removeChild(t[0].parentElement);
+      a[a.length-1]
+    })
+  </script>
+</body>
+</html>

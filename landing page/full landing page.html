@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style media="screen">
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : "montserrat", sans-serif;
+    }
+    .page{
+      width : 100%;
+      height : 100vh;
+      color : white;
+      background : black;
+      position : relative;
+      overflow : hidden;
+    }
+    .page::after{
+      content : "";
+      position : absolute;
+      left : 0;
+      top : 0;
+      width : 100%;
+      height : 100%;
+      background : url(background.jpg) no-repeat 50% 50%;
+      opacity : 0.4;
+      animation : anim 25s linear infinite;
+    }
+    @keyframes anim{
+      50%{
+        transform : scale(1.5);
+      }
+      100%{
+        transform : scale(1);
+      }
+    }
+
+
+    .img{
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      text-align : center;
+      font-weight : bold;
+      z-index : 9999;
+    }
+
+    .img h1{
+      text-transform : uppercase;
+      color : tomato;
+      font-size : 40px;
+
+    }
+    .img p{
+      font-size : 20px;
+    }
+    .img input{
+      border : 2px solid tomato;
+      text-transform : uppercase;
+      padding : 10px;
+      color : tomato;
+      background : none;
+      text-align : center;
+      font-weight : bold;
+      transition : 0.4s;
+      cursor : pointer;
+    }
+    .img input:hover{
+      color : white;
+      background : tomato;
+    }
+    .p{
+      margin : 0;
+      padding : 10px;
+      background : black;
+      color : white;
+      text-align : justify;      
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="img">
+      <h1>full landing page</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut deserunt distinctio temporibus porro magni quo asperiores! Cumque sit accusantium asperiores?
+      </p>
+      <input type="text" value = "get started">
+    </div>
+  </div>
+  <p class = "p">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae odit, voluptates, culpa sapiente fugit inventore autem nulla eligendi eos sunt, eveniet modi. Natus sunt quasi sit eveniet delectus atque ex, ullam laborum, commodi voluptates consequatur recusandae totam, obcaecati saepe. Non suscipit illo ullam ratione atque sit illum, corporis tenetur reprehenderit quisquam, temporibus iste eaque omnis praesentium sequi facere, eligendi eius quod obcaecati harum optio cupiditate consectetur dicta. Ullam totam, natus earum accusamus, rem dolorum quasi illo quisquam doloremque. Assumenda aspernatur atque asperiores, rem mollitia dolorem, beatae, sunt dicta voluptatibus magnam reiciendis dolore soluta aperiam doloribus temporibus molestias numquam blanditiis sit eligendi aut quasi impedit explicabo cum deleniti. Tempore laborum animi doloremque facere itaque tempora fuga recusandae, nemo ad pariatur beatae ullam corrupti, at officia maiores nostrum earum qui debitis libero ea eos aperiam accusantium harum. Eos cum necessitatibus nisi ab cupiditate culpa mollitia odit, repellat, eius sapiente, numquam natus. Obcaecati, aliquam sit quas optio maiores inventore ad aut tempore iste sunt autem numquam voluptatibus delectus sequi unde vel, tempora nulla non ex cum, ratione. Id explicabo laboriosam esse, necessitatibus quas possimus repellendus magnam perspiciatis saepe recusandae eum quae molestiae dicta, ipsum enim beatae sapiente natus, praesentium aspernatur vitae non ea quaerat qui doloremque. Culpa et, possimus voluptates. Commodi quod aperiam culpa harum, modi, consectetur necessitatibus voluptas recusandae sint quaerat quasi, totam assumenda. Et adipisci expedita sit obcaecati incidunt officia distinctio inventore iusto ad aspernatur, temporibus id veniam velit repellat unde saepe. Pariatur porro dolorum sed autem fuga laboriosam quo tempora, minima, saepe necessitatibus error labore aspernatur non laborum fugit quasi corporis nobis facilis sit, vitae dolorem veniam ex impedit. Aut labore autem error necessitatibus vitae nostrum molestias ipsum odit ipsa beatae molestiae minus minima reiciendis perspiciatis, iste eum, suscipit quisquam provident ea fuga magni iusto ut. Ad id, hic deleniti blanditiis nam veniam iste ullam quia aperiam totam, aspernatur ducimus minima dolor error, itaque reiciendis eaque. Corporis qui, perspiciatis asperiores? Laudantium in beatae, aspernatur temporibus possimus eaque rem necessitatibus facere, nam consequatur dolore! Vitae nihil earum, at, incidunt architecto corrupti perspiciatis. Impedit corporis ut accusamus rerum ea nesciunt beatae iure consequuntur, provident. Qui minus impedit labore quisquam suscipit? Blanditiis minus, veritatis. Mollitia hic maxime unde laudantium totam porro sit quod voluptas eveniet libero. Esse doloremque animi adipisci corrupti quidem odio reprehenderit. Assumenda fuga praesentium veritatis. Magnam vel nihil natus, aspernatur libero. Eius perspiciatis molestiae, dolorem magnam maiores exercitationem laudantium esse sunt soluta repudiandae reiciendis enim necessitatibus maxime debitis aliquam sint vero eum eveniet labore veniam, iusto, ratione. Perferendis praesentium mollitia quas possimus sapiente velit inventore ipsam eum voluptatem, expedita, molestiae eaque eos voluptas rerum repudiandae dicta. Aliquam, quo. Magnam ipsum adipisci optio excepturi doloribus deserunt ipsam dolore quia quasi, nisi. Ipsum nisi perferendis, possimus praesentium aspernatur nobis quos commodi optio velit dolor consequuntur laborum nihil quia excepturi officiis ipsa recusandae temporibus vero et, in iure voluptatum delectus libero! Recusandae explicabo, dignissimos quisquam officiis facere, tempore dolores enim nesciunt repellat. Eveniet consectetur eligendi molestiae, cumque quibusdam nam officia inventore aspernatur a.
+  </p>
+</body>
+</html>

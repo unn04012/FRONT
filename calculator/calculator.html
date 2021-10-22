@@ -1,0 +1,95 @@
+<!Doctype html>
+<html>
+<head>
+  <style>
+    *{
+      margin : 0;
+      padding : 0;
+    }
+    .bg{
+      height : 100%;      
+    }
+
+    .calculator{
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+    }
+    .button{
+      margin : 2px;
+      padding : 10px;
+      font-size : 18px;
+      width : 50px;
+      cursor :pointer;
+    }
+    .textview{
+      margin : 4px;
+      padding : 10px;
+      width : 196px;
+      font-size : 20px;
+      border : 1px solid tomato;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="calculator">
+    <form name = "form">
+      <input class ="textview" type="text" name = "textview">
+    </form>
+    <table>
+      <tr>
+        <td><input onclick = "clean()" class = "button" type="button" value = "C"></td>
+        <td><input onclick = "back()" class = "button" type="button" value = "<"></td>
+        <td><input onclick = "insert('/')" class = "button" type="button" value = "/"></td>
+        <td><input onclick = "insert('*')" class = "button" type="button" value = "X"></td>
+      </tr>
+      <tr>
+        <td><input onclick = "insert(7)" class = "button" type="button" value = "7"></td>
+        <td><input onclick = "insert(8)" class = "button" type="button" value = "8"></td>
+        <td><input onclick = "insert(9)" class = "button" type="button" value = "9"></td>
+        <td><input onclick = "insert('-')" class = "button" type="button" value = "-"></td>
+      </tr>
+      <tr>
+        <td><input onclick = "insert(4)" class = "button" type="button" value = "4"></td>
+        <td><input onclick = "insert(5)" class = "button" type="button" value = "5"></td>
+        <td><input onclick = "insert(6)" class = "button" type="button" value = "6"></td>
+        <td><input onclick = "insert('+')" class = "button" type="button" value = "+"></td>
+      </tr>
+      <tr>
+        <td><input onclick = "insert(1)" class = "button" type="button" value = "1"></td>
+        <td><input onclick = "insert(2)" class = "button" type="button" value = "2"></td>
+        <td><input onclick = "insert(3)" class = "button" type="button" value = "3"></td>
+        <td rowspan = "2"><input onclick = "same()" class = "button" style = "height:95px;"type="button" value = "="></td>
+      </tr>
+      <tr>
+        <td colspan ="2" ><input onclick = "insert(0)" class = "button" style = "width:106px"type="button" value = "0"></td>
+        <td><input onclick = "insert(.)" class = "button" type="button" value = "."></td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    var t = document.getElementsByClassName('textview')[0];
+    var b = document.getElementsByClassName('button');
+
+      function insert(num){
+        t.value += num;
+      }
+      function same(){
+        var exp = t.value;
+        if(exp){
+          t.value = eval(exp);
+        }
+      }
+      function clean(){
+        t.value = "";
+      }
+      function back(){
+        var exp = t.value;
+        t.value = exp.substring(0,exp.length-1);
+      }
+  </script>
+</body>
+</html>

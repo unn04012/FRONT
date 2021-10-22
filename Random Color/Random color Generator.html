@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+<head>
+  <style>
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : 'montserrat';
+      background : orange;
+    }
+    .text{
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      font-size : 24px;
+      font-weight : 600;
+      text-align : center;
+    }
+    .button{
+      margin-top : 20px;
+      font-size : 24px;
+      padding : 10px;
+      background : none;
+      outline : none;
+      border  : 2px solid white;
+      cursor : pointer;
+      z-index : 9999 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    <div>hello</div>
+    <button class="button">
+      Get New Color
+    </button>
+  </div>
+
+  <script>
+    var button = document.getElementsByClassName("button")[0];
+    var background = document.querySelector('body');
+    var codeValue = document.getElementsByClassName("text");
+
+    button.addEventListener('click',function(event){
+      var colorCode = '#'+Math.round(Math.random()* 0xffffff).toString(16);
+      background.style.background = colorCode;
+      codeValue[0].firstChild.nextElementSibling.innerHTML = colorCode;
+    })
+  </script>
+</body>
+</html>

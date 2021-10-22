@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/d9b7166f9c.js"></script>
+  <style>
+    *{
+      margin : 0;
+      padding : 0;
+      font-family : sans-serif;
+    }
+    .header{
+      height : 100px;
+      background : #34495e;
+      padding : 0 20px;
+      color : #fff;
+    }
+    .logo{
+      line-height : 100px;
+      float : left;
+      text-transform : uppercase;
+    }
+    .menu{
+      float : right;
+      line-height : 100px;
+    }
+    .menu a{
+      text-decoration : none;
+      text-transform : uppercase;
+      color : #fff;
+      padding : 0 10px;
+      transition : 0.4s;
+    }
+    .show-menu-btn, .hide-menu-btn{
+      transition : 0.4s;
+      font-size : 30px;
+      cursor : pointer;
+      display : none;
+    }
+    .show-menu-btn{
+      float : right
+    }
+    .show-menu-btn i{
+      line-height : 100px;
+    }
+    .menu a:hover,
+    .show-menu-btn:hover,
+    .hide-menu-btn:hover{
+      color : #3498db;
+    }
+
+    #chk{
+      position : absolute;
+      visibility : hidden;
+      z-index : -1111;
+    }
+    .content{
+      padding : 0 20px;
+    }
+    .content img{
+      width : 100%:
+      max-width : 700px;
+      margin : 20px; 0;
+    }
+    .content p{
+      text-align : justify;
+    }
+    @media screen and (max-width : 800px){
+      .show-menu-btn, .hide-menu-btn{
+        display : block;
+      }
+      .menu{
+        position : fixed;
+        width : 100%;
+        height : 100vh;
+        background : #333;
+        right : -100%;
+        top : 0;
+        text-align : center;
+        padding : 80px 0;
+        line-height : normal;
+        transition : 0.7s;
+      }
+      .menu a{
+        display : block;
+        padding : 20px;
+      }
+      .hide-menu-btn{
+        position : absolute;
+        top : 40px;
+        right : 40px;
+      }
+      #chk:checked ~ .menu{
+        right : 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+   <div class="header">
+     <h2 class="logo">DarkCode</h2>
+     <input type="checkbox" id = "chk">
+     <label for="chk" class = "show-menu-btn">
+       <i class="fas fa-ellipsis-h"></i>
+     </label>
+  <ul class="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Works</a>
+    <a href="#">Contact</a>
+    <label for="chk" class = "hide-menu-btn">
+       <i class="fas fa-times"></i>
+    </label>
+  </ul>
+   </div>
+<div class="content">
+   <center>
+     <img src="winter.jpg" alt="">
+   </center>
+   <p>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, cumque, nobis. Non nostrum illum ex corporis vel aspernatur soluta doloremque reiciendis corrupti beatae unde aliquam commodi quas quis suscipit molestias inventore consequuntur qui exercitationem esse mollitia, culpa explicabo, fuga. At, aut eligendi facilis fuga quae distinctio animi perspiciatis nesciunt quidem pariatur libero corporis atque aperiam quisquam repudiandae unde, dolorum architecto culpa rem tempora reiciendis obcaecati dolorem nostrum fugiat eos? Culpa quo mollitia architecto illo natus delectus nisi iure, soluta ipsa obcaecati tenetur vero quibusdam dolor praesentium repudiandae veritatis quasi aspernatur asperiores consectetur suscipit cupiditate libero iusto at ab aliquid! Asperiores iste placeat possimus aperiam, quos labore quis similique culpa officiis praesentium natus illum adipisci veritatis tempora esse nisi, eveniet unde officia quo itaque, nobis cupiditate. Delectus dolorum alias id optio soluta tempore, fugit pariatur consequuntur, veniam eveniet quisquam dolorem in ab molestiae facilis. Distinctio unde ipsam exercitationem, laborum nostrum nam odio illum placeat tempore eius quas id, aut dolores suscipit iusto cupiditate. Pariatur ipsum sunt laborum hic officia, quaerat minima dolores eaque quos doloremque voluptas sit ullam vero autem maiores quod et consectetur. Consequatur facilis repellat dolore exercitationem hic illum suscipit eius rerum voluptate ipsum recusandae, veniam ipsam veritatis possimus animi vel et. Minus veritatis fugiat quidem porro doloribus voluptas numquam, distinctio quis laudantium ex, expedita, illo cumque! Quibusdam ad nam blanditiis, itaque consectetur atque odit ipsa quam. Minus dolorum vel aut tenetur? Expedita inventore accusamus ipsam porro, saepe maiores ab aspernatur! Voluptatibus repudiandae minima odit maxime blanditiis incidunt, reiciendis omnis ducimus velit necessitatibus nulla nisi, earum atque tempore dolor suscipit placeat nam quisquam alias temporibus voluptates cumque! Sapiente blanditiis, repudiandae nostrum adipisci iste fugiat quos assumenda incidunt architecto est impedit officiis aspernatur eius hic. Voluptatum vel ullam, atque dolor reprehenderit. Unde sunt nisi rerum placeat quaerat labore sequi. Ratione earum repudiandae modi similique facere doloremque, ducimus, ab, labore quo possimus vero quaerat sint dolore, asperiores omnis reiciendis totam. Quod cupiditate odio dolores, tempora amet reprehenderit, maxime beatae enim neque, nisi consequuntur. Laboriosam sit explicabo hic facilis. Rem voluptatum ex impedit minima ipsa, eos veritatis, velit sit natus corrupti. Et sapiente, error sit maiores vel tempora, sint mollitia eligendi, sunt quos voluptatum accusantium perspiciatis labore sequi? Nisi exercitationem culpa alias mollitia non, eveniet cupiditate veniam maxime, commodi adipisci natus eius soluta amet explicabo dignissimos delectus ipsa eum dolor, architecto, reprehenderit eaque reiciendis rerum asperiores. Libero magnam quae sequi fuga, temporibus dolores voluptatem, reprehenderit vel, quidem omnis atque similique eius aperiam iure pariatur iste, ut. Itaque placeat rem doloremque blanditiis velit ad repudiandae expedita nobis dolorem possimus quaerat amet ex laboriosam culpa sunt nisi accusamus ea ullam, eaque inventore. Doloribus at quibusdam, quod natus enim odio cupiditate in quae soluta illo minus nemo laudantium ad rem dignissimos, debitis delectus, consectetur culpa. Alias ea consequuntur provident possimus odio, fugiat aperiam unde dignissimos aliquam voluptatibus cum blanditiis facilis sapiente sunt labore quos mollitia, earum maxime tempore optio aut beatae consequatur explicabo. Libero consectetur, vero. Porro unde nihil facilis error quod, earum quia, nostrum.
+   </p>
+</div>
+</body>
+</html>

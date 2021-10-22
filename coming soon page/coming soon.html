@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body,html{
+      margin : 0;
+      padding : 0;
+      width : 100%;
+      height : 100%;
+    }
+    body{
+      background : url(background.jpg) 50% 50%;
+      background-size : cover;
+      font-family : "montserrat", sans-serif;
+    }
+    .container{
+      width : 100%;      
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      text-align : center;
+      color : white;
+    }
+    .container h1{
+      font-size : 60px;
+      letter-spacing : 10px;
+      margin : 0px;
+    }
+    .container h2{
+      margin : 0;
+      font-size : 20px;
+      font-weight : 500;
+      font-style : italic;
+    }
+    .count{
+      margin : 40px 0;
+    }
+    .countd{
+      display : inline-block;
+      height : 80px;
+      width : 80px;
+      border : 2px solid;
+      margin : 0 30px;
+      font-size : 12px;
+      font-weight : bold;
+      border-radius : 50%;
+      overflow : hidden;
+    }
+    .countd span{
+      display : block;
+      font-size : 26px;
+      margin-top : 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>DARKCODE</h1>
+    <h2>We are coming soon.</h2>
+
+    <div class="count">
+
+
+      <div class="countd">
+        <span id = "month">00</span>
+        MONTH
+      </div>
+      <div class="countd">
+        <span id = "days">00</span>
+        DAYS
+      </div>
+
+      <div class="countd">
+        <span id = "hours">00</span>
+        HOURS
+      </div>
+
+      <div class="countd">
+        <span id = "minutes">00</span>
+        MINUTES
+      </div>
+
+      <div class="countd">
+        <span id = "seconds">00</span>
+        SECONDS
+      </div>
+    </div>
+  </div>
+
+  <script>
+    setInterval(function () {
+      var date = new Date();
+      var getMonth = date.getMonth()+1;    // 1월은 0
+      var getDays = date.getDate();
+      var getHours = date.getHours();
+      var getMinutes = date.getMinutes();
+      var getSeconds = date.getSeconds();
+
+      var month = document.getElementById('month');
+      var days = document.getElementById('days');
+      var hours = document.getElementById('hours');
+      var minutes = document.getElementById('minutes');
+      var seconds = document.getElementById('seconds');
+      month.innerHTML = getMonth;
+      days.innerHTML = getDays;
+      hours.innerHTML = getHours;
+      minutes.innerHTML = getMinutes;
+      seconds.innerHTML = getSeconds;
+    }, 1000);
+
+
+  </script>
+</body>
+</html>

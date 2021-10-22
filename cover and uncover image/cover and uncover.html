@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      margin : 0;
+      padding : 0;
+      font-family : sans-serif;
+    }
+    .contain{
+      position : absolute;
+      width : 900px;
+      height : 520px;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+    }
+    .img{
+      width : 100%;
+      height : 100%;
+      filter : blur(10px);
+    }
+    .btn{
+      position : absolute;
+      bottom : 40px;
+      right : 40px;
+      border-radius : 6px;
+      background : none;
+      color : white;
+      padding : 10px;
+      font-size : 16px;
+      opacity : 0.6;
+      cursor : pointer;
+      transition : 0.5s;
+    }
+    .btn:hover{
+      border-color : aqua;
+    }
+    .text{
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      text-align : center;
+      color : white;
+      font-size : 18px;
+      text-shadow : 0 0 10px black;
+    }
+  </style>
+</head>
+<body>
+  <div class="contain">
+    <img class = "img"src="background1.jpg" alt="">
+    <button class = "btn">uncover image</button>
+    <div class="text">This photo may have a violent content</div>
+  </div>
+  <script>
+    var t = 0;
+    var btn = document.getElementsByClassName('btn')[0];
+    var text = document.getElementsByClassName('text')[0];
+    var img = document.getElementsByClassName('img')[0];
+
+
+      btn.addEventListener('click',function(event){
+        if(t == 0){
+          btn.innerHTML = "cover image";
+          text.style.display = "none";
+          img.style.filter = 'blur(0)';
+          t=1;
+        }
+        else{
+          btn.innerHTML = "uncover image";
+          text.style.display = "block";
+          img.style.filter = 'blur(10px)';
+          t=0;
+        }
+      });
+  </script>
+</body>
+</html>

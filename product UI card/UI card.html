@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+        margin : 0;
+        padding : 0;
+        text-decoration : none;
+        font-family : "montserrat";
+      }
+      body{
+        background : #6ab84c;
+      }
+      .card{
+        width : 360px;
+        background : #f1f1f1;
+        position : absolute;
+        top : 50%;
+        left : 50%;
+        transform : translate(-50%, -50%);
+      }
+      .top-section{
+        height : 310px;
+        overflow : hidden;
+        background : #fff;
+        position : relative;
+      }
+      #image-container{
+        width : 360px;
+        height : 240px;
+      }
+      .nav{
+        text-align : center;
+      }
+      .nav img{
+        width : 80px;
+        height : 50px;
+        border : 1px solid #ddd;
+        margin : 8px 2px;
+        cursor : pointer;
+        transition : 0.3s;
+      }
+      .nav img:hover{
+        border-color : #6ab84c;
+      }
+      .price{
+        position : absolute;
+        top : 10px;
+        right : 10px;
+        color : #6ab84c;
+        font-size : 24px;
+      }
+      .product-info{
+        padding : 24px;
+      }
+      .name{
+        text-transform : uppercase;
+        font-size :24px;
+        color : #333;
+      }
+      .dis{
+        font-size : 16px;
+        opacity : 0.7
+      }
+      .btn{
+        display : block;
+        background : #6ab84c;
+        text-align : center;
+        color : #fff;
+        padding : 10px;
+        margin-top : 10px;
+        transition : 0.3s;
+      }
+      .btn:hover{
+        background : #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="top-section">
+        <img id = "image-container" src="1.png" alt="">
+        <div class="nav">
+          <img onclick = "changeImg(this)" src="1.png" alt="">
+          <img onclick = "changeImg(this)" src="2.png" alt="">
+          <img onclick = "changeImg(this)" src="3.png" alt="">
+        </div>
+        <div class="price">$80</div>
+      </div>
+      <div class="product-info">
+        <div class="name">Sunglasses</div>
+        <div class="dis">Awesome Men Sunglasses</div>
+        <a class = "btn" href="#">Add to cart</a>
+      </div>
+    </div>
+    <script>
+      var t = document.getElementsByClassName("btn");
+      var image = document.getElementById("image-container");
+      function changeImg(event){
+        image.src = event.src;
+      }
+    </script>
+  </body>
+  </html>
